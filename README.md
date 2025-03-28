@@ -15,20 +15,28 @@ This project integrates **Machine Learning (ML) and Blockchain** to detect and p
 ## 🏗️ Project Structure
 ```
 VANET-Project/
-│── backend_api.py          # Flask API for ML and Blockchain interactions
-│── ml_model.pkl            # Trained ML model for message classification
+│── backend_api.py              # Flask API for ML and Blockchain interactions
+|── Machine Learning Model.ipynb# Jupyter notebook for training and evaluating machine learning model
+|── vanet_syntactic_dataset.csv #Dataset used to train the model
+│── ml_model.pkl                # Trained ML model for message classification
+│── vectorizer.pkl              # Vectorizer that is used fit data into model
 │── MaliciousMessageStorage.sol # Solidity Smart Contract
-│── frontend/               # React Frontend
+│── blockchain-ml-frontend/     # React Frontend
 │   │── src/
 │   │   │── pages/
-│   │   │   ├── HomePage.js  # Main message submission page
-│   │   │   ├── Register.js  # Vehicle registration page
-│   │   │   ├── Blocked.js   # Page for blocked users
+│   │   │   ├── HomePage.js     # Main message submission page
+│   │   │   ├── Register.js     # Vehicle registration page
+│   │   │   ├── Blocked.js      # Page for blocked users
 │   │   │── utils/
-│   │   │   ├── api.js       # API functions to communicate with Flask backend
+│   │   │   ├── api.js          # API functions to communicate with Flask backend
+│   │   │   ├── auth.js         # Authentication validation
+│   │   ├── MaliciousMessageStorage_abi.json #json storage of abi key of solidity smart contract
+│   │   ├── App.js              # Entry point for web application includes routing
+│   │   ├── index.css           # Css to include tailwind
+│   │   ├── web3.js             # To establish connectiom with local Etherium network
 │   │── public/
 │   │── package.json
-│── README.md               # Project Documentation
+│── README.md                   # Project Documentation
 ```
 
 ---
